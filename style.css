@@ -85,11 +85,13 @@ html {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1.2s ease-out forwards;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: 0 4px 24px rgba(99,102,241,0.18);
-  margin-bottom: 24px;
+  width: 260px;
+  height: 260px;
+  max-width: 90vw;
+  max-height: 40vh;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+  margin-bottom: 32px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -196,11 +198,16 @@ html {
   transform: scale(1.04);
 }
 .carousel-item img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  width: 320px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.13);
   transition: transform 0.4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .carousel-item h3 {
   font-size: 1.1rem;
@@ -329,7 +336,10 @@ html {
   }
 
   .logo-video {
-    width: 100%;
+  width: 90vw;
+  max-width: 320px;
+  height: auto;
+  border-radius: 24px;
   }
 
   .navbar ul {
