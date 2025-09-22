@@ -1,4 +1,47 @@
 /* ============================= */
+/* STRUCTURE ET CALIBRAGE GLOBAL */
+/* ============================= */
+main, .about-section, .projets-section, .contact-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.about-section {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.projets-section {
+  margin-bottom: 40px;
+}
+.contact-section {
+  margin-bottom: 48px;
+}
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+@media (max-width: 700px) {
+  main, .about-section, .projets-section, .contact-section, .footer {
+    max-width: 100vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 24px;
+  }
+}
+/* ============================= */
 /* LOADER ANIMÉ */
 /* ============================= */
 .loader {
