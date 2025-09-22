@@ -32,20 +32,24 @@ const prevBtn = document.querySelector(".carousel-btn.prev");
 const nextBtn = document.querySelector(".carousel-btn.next");
 
 let index = 0;
+let autoScrollInterval;
 
 function updateCarousel() {
   const width = items[0].clientWidth;
+  track.style.transition = "transform 0.7s cubic-bezier(.4,2,.3,1)";
   track.style.transform = `translateX(${-index * width}px)`;
 }
 
 nextBtn.addEventListener("click", () => {
   index = (index + 1) % items.length;
   updateCarousel();
+  resetAutoScroll();
 });
 
 prevBtn.addEventListener("click", () => {
   index = (index - 1 + items.length) % items.length;
   updateCarousel();
+  resetAutoScroll();
 });
 
 // Swipe mobile
@@ -56,6 +60,19 @@ track.addEventListener("touchend", (e) => {
   if (startX > endX + 50) nextBtn.click();
   if (startX < endX - 50) prevBtn.click();
 });
+
+// Défilement automatique
+function autoScroll() {
+  autoScrollInterval = setInterval(() => {
+    index = (index + 1) % items.length;
+    updateCarousel();
+  }, 3000); // 3 secondes
+}
+function resetAutoScroll() {
+  clearInterval(autoScrollInterval);
+  autoScroll();
+}
+autoScroll();
 
 // ========================
 // MODE SOMBRE / CLAIR
@@ -79,3 +96,41 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", "dark");
   }
 });
+
+// ========================
+// FOOTER YEAR AUTO
+// ========================
+const yearSpan = document.getElementById('footer-year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ========================
+// FORM CONFIRMATION
+// ========================
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+if (contactForm && formSuccess) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        contactForm.reset();
+        formSuccess.style.display = 'block';
+      } else {
+        formSuccess.textContent = "Une erreur est survenue. Veuillez réessayer.";
+        formSuccess.style.display = 'block';
+      }
+    }).catch(() => {
+      formSuccess.textContent = "Une erreur est survenue. Veuillez réessayer.";
+      formSuccess.style.display = 'block';
+    });
+  });
+}
