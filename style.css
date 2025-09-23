@@ -1,4 +1,31 @@
 /* ============================= */
+/* HERO TITLE ACCROCHE */
+/* ============================= */
+.hero-title h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin-top: 24px;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.hero-title .highlight {
+  color: #3b82f6;
+  background: linear-gradient(90deg, #6366f1 60%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@media (max-width: 700px) {
+  .hero-title h1 {
+    font-size: 1.5rem;
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+}
+/* ============================= */
 /* STRUCTURE ET CALIBRAGE GLOBAL */
 /* ============================= */
 main, .about-section, .projets-section, .contact-section {
