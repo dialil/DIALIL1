@@ -109,6 +109,14 @@ body.light .hero-title h1 {
   color: #1e293b;
 }
 @media (max-width: 700px) {
+  .btn-contact {
+    font-size: 1.05rem;
+    padding: 14px 0;
+    width: 90%;
+    max-width: 340px;
+    margin: 32px auto 0 auto;
+    display: block;
+  }
   .hero-title h1 {
     font-size: 1.5rem;
     margin-top: 16px;
@@ -204,10 +212,6 @@ main, .about-section, .projets-section, .contact-section {
   .hero h1 {
     font-size: 1.3rem;
     padding: 0 10px;
-  }
-  .btn-contact {
-    font-size: 1rem;
-    padding: 10px 18px;
   }
   .carousel {
     width: 100vw;
