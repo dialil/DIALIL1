@@ -1,3 +1,32 @@
+/* Sélecteur de langue en haut à droite */
+.lang-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1200;
+  background: rgba(49,46,129,0.97);
+  border-radius: 24px;
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-switcher a {
+  color: #ffd700;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+.lang-switcher a:hover {
+  color: #fff;
+}
+.lang-switcher span {
+  color: #f8fafc;
+  font-weight: 600;
+}
 /* Message succès formulaire contact */
 #form-success {
   display: none;
