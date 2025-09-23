@@ -1,3 +1,10 @@
+/* Message succès formulaire contact */
+#form-success {
+  display: none;
+  color: #6366f1;
+  font-weight: bold;
+  margin-top: 16px;
+}
 /* ============================= */
 /* MENU BURGER RESPONSIVE GAUCHE */
 /* ============================= */
@@ -27,11 +34,12 @@
 }
 @media (max-width: 900px) {
   .burger {
-    display: flex;
+    display: flex !important;
     left: 16px;
     right: auto;
   }
   .nav-links {
+    display: flex !important;
     position: fixed;
     top: 0;
     left: -100vw;
@@ -48,9 +56,13 @@
     gap: 24px;
     transition: left 0.35s cubic-bezier(.4,2,.3,1);
     z-index: 1100;
+    overflow-y: auto;
   }
   .nav-links.open {
     left: 0;
+  }
+  .nav-links:not(.open) {
+    left: -100vw;
   }
   .nav-links li {
     width: 100%;
@@ -767,5 +779,4 @@ footer .footer-social a:hover {
   background: #6366f1;
   color: #fff;
   transform: scale(1.1);
-}
 }
