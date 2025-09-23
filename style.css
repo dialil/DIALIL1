@@ -1,3 +1,11 @@
+/* Texte Instagram fusionné avec l’icône */
+.instagram-text {
+  margin-left: 8px;
+  color: #ff6b35;
+  font-weight: bold;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
 /* ============================= */
 /* HERO TITLE ACCROCHE */
 /* ============================= */
