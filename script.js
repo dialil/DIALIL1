@@ -1,3 +1,12 @@
+// Menu burger responsive
+const burger = document.getElementById('burger-menu');
+const navLinks = document.getElementById('nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+}
 // Loader animé
 window.addEventListener('load', function() {
   const loader = document.getElementById('loader');
